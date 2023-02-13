@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Status</h2>
+        <p>{{ status }}</p>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="info">{{ info }}</label><br />
+            {{ form.as_div }}
+            <br />
+            <input type="submit" value="Далее" />
+        </form>
+
+        <p>{{ instruction|linebreaks  }}</p>
+
+    </body>
+</html>
